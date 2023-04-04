@@ -37,7 +37,7 @@
 </script>
 
 <!-- src/components/ShopGrid.svelte -->
-<div class="container mx-auto py-20">
+<div class="container mx-auto py-16">
   <h2 class="text-4xl font-bold text-black mb-6">
     Our Collection of Healthy Living
   </h2>
