@@ -60,7 +60,7 @@
         <ul
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><a href="/">About</a></li>
+          <li><a href="/">Item 1</a></li>
           <li>
             <button class="justify-between w-full text-left">
               Parent
@@ -87,12 +87,12 @@
       <!-- Desktop menu -->
       <div class="flex items-center justify-between py-4">
         <div class="hidden lg:flex">
-          <a href="/" class="btn btn-ghost normal-case text-xl">JustFresh</a>
+          <a href="/" class="btn btn-ghost normal-case text-xl">daisyUI</a>
           <ul class="menu menu-horizontal px-1">
-            <li><a href="/">About</a></li>
+            <li><a href="/">Item 1</a></li>
             <li>
               <button class="justify-between">
-                Packages
+                Parent
                 <svg
                   class="fill-current"
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,45 +105,17 @@
                 >
               </button>
               <ul class="p-2">
-                <li><a href="/">Cleanse Week</a></li>
-                <li><a href="/">Subscription </a></li>
-                <li><a href="/">Food & Fitness </a></li>
+                <li><a href="/">Submenu 1</a></li>
+                <li><a href="/">Submenu 2</a></li>
               </ul>
             </li>
-            <li><a href="/">Groceries</a></li>
-
-            <li>
-              <button class="justify-between">
-                Market Place
-                <svg
-                  class="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  ><path
-                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                  /></svg
-                >
-              </button>
-              <ul class="p-2">
-                <li><a href="/">Juices</a></li>
-                <li><a href="/">Food </a></li>
-                <li><a href="/">Kitchen Tools </a></li>
-              </ul>
-            </li>
-
-            <li><a href="/">Health Tips & Recipes</a></li>
-            <li><a href="/">Contact</a></li>
+            <li><a href="/">Item 3</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="navbar-end">
-      <a href="/" class="btn bg-black">Get started</a>
-      <a href="/" class="btn bg-transparent text-orange-600 outline-2 ml-5"
-        >Sign in</a
-      >
+      <a href="/" class="btn">Get started</a>
     </div>
   </div>
 </div>

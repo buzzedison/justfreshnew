@@ -16,25 +16,21 @@
         </div>
       </div>
     </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="card w-96 glass">
-        <figure>
-          <img src="/juice1.jpeg" alt="juices!" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Healthy Groceries</h2>
-          <p>
-            Stock up on nutritious and organic groceries to fuel your healthy
-            lifestyle.
-          </p>
-          <div class="card-actions justify-end">
-            <button class="btn bg-black">Shop Groceries</button>
-          </div>
-        </div>
-      </div>
+  </div>
+  
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-bold text-orange-600 mb-4">Healthy Groceries</h2>
+      <p class="text-gray-700 mb-6">
+        Stock up on nutritious and organic groceries to fuel your healthy
+        lifestyle. Choose from a variety of products, including grains, snacks,
+        and beverages, carefully selected for their quality and taste.
+      </p>
+      <a
+        href="/groceries"
+        class="bg-orange-600 text-white font-semibold py-2 px-4 rounded hover:bg-black"
+        >Shop Groceries</a
+      >
     </div>
-
     <div class="bg-white shadow-md rounded-lg p-6">
       <h2 class="text-2xl font-bold text-orange-600 mb-4">Custom Meal Plans</h2>
       <p class="text-gray-700 mb-6">

@@ -25,7 +25,7 @@
     </div>
   </div>
 </footer> -->
-<div class="pt-20">
+<div class="mt-10">
   <footer class="footer p-10 bg-base-200 text-base-content py-7 pt-8">
     <div>
       <svg
@@ -41,8 +41,8 @@
         /></svg
       >
       <p>
-        Just Fresh<br />Promoting Healthy Living and <br /> Supporting Producers
-        Since 2013
+        Just Fresh<br />Promoting Healthy Living and Supporting Producers Since
+        2013
       </p>
     </div>
     <div>

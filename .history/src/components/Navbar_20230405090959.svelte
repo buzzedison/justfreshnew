@@ -37,12 +37,56 @@
   });
 </script>
 
-<div class="container mx-auto px-4">
+<div class="navbar bg-base-100">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <button class="btn btn-ghost lg:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-5 w-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h8m-8 6h16"
+          /></svg
+        >
+      </button>
+      <ul
+        class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+      >
+        <li><a href="/">Item 1</a></li>
+        <li>
+          <button class="justify-between w-full text-left">
+            Parent
+            <svg
+              class="fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><path
+                d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"
+              /></svg
+            >
+          </button>
+          <ul class="p-2">
+            <li><a href="/">Submenu 1</a></li>
+            <li><a href="/">Submenu 2</a></li>
+          </ul>
+        </li>
+        <li><a href="/">Item 3</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Rest of the code -->
   <div class="navbar bg-base-100">
     <div class="navbar-start">
-      <!-- Mobile menu -->
-      <div class="dropdown lg:hidden">
-        <button class="btn btn-ghost">
+      <div class="dropdown">
+        <button class="btn btn-ghost lg:hidden">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-5 w-5"
@@ -60,7 +104,7 @@
         <ul
           class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
-          <li><a href="/">About</a></li>
+          <li><a href="/">Item 1</a></li>
           <li>
             <button class="justify-between w-full text-left">
               Parent
@@ -83,68 +127,8 @@
           <li><a href="/">Item 3</a></li>
         </ul>
       </div>
-
-      <!-- Desktop menu -->
-      <div class="flex items-center justify-between py-4">
-        <div class="hidden lg:flex">
-          <a href="/" class="btn btn-ghost normal-case text-xl">JustFresh</a>
-          <ul class="menu menu-horizontal px-1">
-            <li><a href="/">About</a></li>
-            <li>
-              <button class="justify-between">
-                Packages
-                <svg
-                  class="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  ><path
-                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                  /></svg
-                >
-              </button>
-              <ul class="p-2">
-                <li><a href="/">Cleanse Week</a></li>
-                <li><a href="/">Subscription </a></li>
-                <li><a href="/">Food & Fitness </a></li>
-              </ul>
-            </li>
-            <li><a href="/">Groceries</a></li>
-
-            <li>
-              <button class="justify-between">
-                Market Place
-                <svg
-                  class="fill-current"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  ><path
-                    d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"
-                  /></svg
-                >
-              </button>
-              <ul class="p-2">
-                <li><a href="/">Juices</a></li>
-                <li><a href="/">Food </a></li>
-                <li><a href="/">Kitchen Tools </a></li>
-              </ul>
-            </li>
-
-            <li><a href="/">Health Tips & Recipes</a></li>
-            <li><a href="/">Contact</a></li>
-          </ul>
-        </div>
-      </div>
     </div>
-    <div class="navbar-end">
-      <a href="/" class="btn bg-black">Get started</a>
-      <a href="/" class="btn bg-transparent text-orange-600 outline-2 ml-5"
-        >Sign in</a
-      >
-    </div>
+    <div class="flex items-center justify-between py-4" />
   </div>
 </div>
 

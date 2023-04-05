@@ -36,6 +36,19 @@
     </div>
 
     <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-bold text-orange-600 mb-4">Healthy Groceries</h2>
+      <p class="text-gray-700 mb-6">
+        Stock up on nutritious and organic groceries to fuel your healthy
+        lifestyle. Choose from a variety of products, including grains, snacks,
+        and beverages, carefully selected for their quality and taste.
+      </p>
+      <a
+        href="/groceries"
+        class="bg-orange-600 text-white font-semibold py-2 px-4 rounded hover:bg-black"
+        >Shop Groceries</a
+      >
+    </div>
+    <div class="bg-white shadow-md rounded-lg p-6">
       <h2 class="text-2xl font-bold text-orange-600 mb-4">Custom Meal Plans</h2>
       <p class="text-gray-700 mb-6">
         Achieve your health goals with custom meal plans created by our expert

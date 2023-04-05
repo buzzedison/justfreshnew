@@ -129,21 +129,16 @@
               <ul class="p-2">
                 <li><a href="/">Juices</a></li>
                 <li><a href="/">Food </a></li>
-                <li><a href="/">Kitchen Tools </a></li>
+                <li><a href="/">Kitchen </a></li>
               </ul>
             </li>
-
-            <li><a href="/">Health Tips & Recipes</a></li>
-            <li><a href="/">Contact</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="navbar-end">
-      <a href="/" class="btn bg-black">Get started</a>
-      <a href="/" class="btn bg-transparent text-orange-600 outline-2 ml-5"
-        >Sign in</a
-      >
+      <a href="/" class="btn">Get started</a>
+      <a href="/" class="btn bg-transparent outline-2 ml-5">Sign in</a>
     </div>
   </div>
 </div>

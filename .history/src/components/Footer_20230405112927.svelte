@@ -41,8 +41,8 @@
         /></svg
       >
       <p>
-        Just Fresh<br />Promoting Healthy Living and <br /> Supporting Producers
-        Since 2013
+        Just Fresh<br />Promoting Healthy Living and Supporting Producers Since
+        2013
       </p>
     </div>
     <div>
