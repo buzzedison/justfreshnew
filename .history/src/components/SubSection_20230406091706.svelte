@@ -44,7 +44,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card w-96 glass">
         <figure>
-          <img src="/juicenew.jpeg" alt="juices!" />
+          <img src="/juice1.jpeg" alt="juices!" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Healthy Groceries</h2>

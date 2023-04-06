@@ -1,5 +1,5 @@
-<header class="bg-white dark:bg-gray-900 mt-10 mb-20">
-  <div class="container px-6 py-16 mx-auto">
+<header class="bg-white dark:bg-gray-900">
+  <div class="container px-6 py-16 mx-auto pt-10">
     <div class="items-center lg:flex">
       <div class="w-full lg:w-full">
         <div class="lg:max-w-lg">

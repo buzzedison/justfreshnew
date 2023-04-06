@@ -1,10 +1,10 @@
-<header class="bg-white dark:bg-gray-900 mt-10 mb-20">
+<header class="bg-white dark:bg-gray-900">
   <div class="container px-6 py-16 mx-auto">
     <div class="items-center lg:flex">
-      <div class="w-full lg:w-full">
+      <div class="w-full lg:w-1/2">
         <div class="lg:max-w-lg">
           <h1
-            class="text-5xl md:text-5xl font-bold text-orange-700 lg:text-6xl"
+            class="text-5xl md:text-5xl font-bold text-orange-700 lg:text-7xl"
           >
             Discover Healthy Foods <br /> and
             <span class="text-orange-600"> Groceries</span>
@@ -29,13 +29,9 @@
         </div>
       </div>
 
-      <div class="flex-right">
-        <div class="w-full rounded-lg pl-10">
-          <img
-            src="/groceries.jpeg"
-            alt="Healthy food"
-            class="object-cover rounded-full px-4"
-          />
+      <div class="">
+        <div class="w-full rounded-lg">
+          <img src="/groceries.jpeg" alt="Healthy food" class="w-cover px-4" />
           <!-- <img
           class="w-full h-full lg:max-w-3xl"
           src="https://merakiui.com/images/components/Catalogue-pana.svg"

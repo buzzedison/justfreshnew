@@ -1,7 +1,7 @@
 <!-- src/components/Subsections.svelte -->
 <div class="container mx-auto py-12">
   <div>
-    <h2 class="text-4xl py-5 mb-8 font-bold text-center">
+    <h2 class="text-4xl py-5 mb-8 font-bold">
       You are what you eat. Let's help you get your groove on
     </h2>
   </div>
@@ -27,7 +27,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card w-96 glass">
         <figure>
-          <img src="/groceriesb.jpeg" alt="juices!" />
+          <img src="/juice1.jpeg" alt="juices!" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Custom Meal Plans</h2>
@@ -36,7 +36,7 @@
             portion sizes, tailored to your unique needs.
           </p>
           <div class="card-actions justify-end">
-            <button class="btn bg-black">Get Started</button>
+            <button class="btn bg-black">Explore Juices</button>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card w-96 glass">
         <figure>
-          <img src="/juicenew.jpeg" alt="juices!" />
+          <img src="/juice1.jpeg" alt="juices!" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Healthy Groceries</h2>

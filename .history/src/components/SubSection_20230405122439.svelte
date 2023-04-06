@@ -1,10 +1,5 @@
 <!-- src/components/Subsections.svelte -->
 <div class="container mx-auto py-12">
-  <div>
-    <h2 class="text-4xl py-5 mb-8 font-bold text-center">
-      You are what you eat. Let's help you get your groove on
-    </h2>
-  </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
     <div class="card w-96 glass">
       <figure>
@@ -21,30 +16,11 @@
         </div>
       </div>
     </div>
-    <!-- 
-    second side -->
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="card w-96 glass">
         <figure>
-          <img src="/groceriesb.jpeg" alt="juices!" />
-        </figure>
-        <div class="card-body">
-          <h2 class="card-title">Custom Meal Plans</h2>
-          <p>
-            We'll help you find the perfect balance of nutrients, flavors, and
-            portion sizes, tailored to your unique needs.
-          </p>
-          <div class="card-actions justify-end">
-            <button class="btn bg-black">Get Started</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="card w-96 glass">
-        <figure>
-          <img src="/juicenew.jpeg" alt="juices!" />
+          <img src="/juice1.jpeg" alt="juices!" />
         </figure>
         <div class="card-body">
           <h2 class="card-title">Healthy Groceries</h2>
@@ -57,6 +33,20 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="bg-white shadow-md rounded-lg p-6">
+      <h2 class="text-2xl font-bold text-orange-600 mb-4">Custom Meal Plans</h2>
+      <p class="text-gray-700 mb-6">
+        Achieve your health goals with custom meal plans created by our expert
+        nutritionists. We'll help you find the perfect balance of nutrients,
+        flavors, and portion sizes, tailored to your unique needs.
+      </p>
+      <a
+        href="/meal-plans"
+        class="bg-orange-600 text-white font-semibold py-2 px-4 rounded hover:bg-black"
+        >Get Started</a
+      >
     </div>
   </div>
 </div>
