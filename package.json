@@ -23,6 +23,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@chec/commerce.js": "^2.8.0",
 		"daisyui": "^2.51.5"
 	}
 }
