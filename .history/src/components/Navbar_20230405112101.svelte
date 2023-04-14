@@ -140,10 +140,9 @@
       </div>
     </div>
     <div class="navbar-end">
-      <a href="/signup" class="btn bg-black">Get started</a>
-      <a
-        href="/signin"
-        class="btn bg-transparent text-orange-600 outline-2 ml-5">Sign in</a
+      <a href="/" class="btn bg-black">Get started</a>
+      <a href="/" class="btn bg-transparent text-orange-600 outline-2 ml-5"
+        >Sign in</a
       >
     </div>
   </div>
