@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import commerce from "$lib/commerce";
-
+  import cart from "$lib/cart";
   interface Product {
     id: string;
     name: string;
@@ -56,6 +56,12 @@
             {/if}
           </div>
           <p>Price: ${product.price.formatted_with_code}</p>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            on:click={() => cart.addItem(product.id, 1)}
+          >
+            Add to Cart
+          </button>
         </li>
       {/each}
     </ul>
