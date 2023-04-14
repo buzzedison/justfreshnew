@@ -54,7 +54,7 @@
                 fill="#EB4335"
               />
             </svg>
-            Sign in with Google
+            Sign up with Google
           </button>
 
           <div

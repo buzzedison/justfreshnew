@@ -15,12 +15,12 @@
             Sign in
           </h1>
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account yet?
+            Already have an account yet?
             <a
-              class="text-orange-650 decoration-2 hover:underline font-medium"
-              href="/signup"
+              class="text-blue-600 decoration-2 hover:underline font-medium"
+              href="../examples/html/signup.html"
             >
-              Sign up here
+              Sign in here
             </a>
           </p>
         </div>

@@ -17,7 +17,7 @@
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
             Don't have an account yet?
             <a
-              class="text-orange-650 decoration-2 hover:underline font-medium"
+              class="text-blue-600 decoration-2 hover:underline font-medium"
               href="/signup"
             >
               Sign up here
