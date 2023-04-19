@@ -6,13 +6,7 @@
   import Navbar from "../components/Navbar.svelte";
   import Footer from "../components/Footer.svelte";
 
-  const nonAuthRoutes = [
-    "/",
-    "/signup",
-    "/signin",
-    "/products",
-    "/products/new",
-  ];
+  const nonAuthRoutes = ["/", "/signup", "/signin", "/products"];
 
   onMount(async () => {
     console.log("app mounted");

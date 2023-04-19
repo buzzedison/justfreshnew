@@ -11,33 +11,61 @@
   let authenticating = false;
   let message = ""; // Add this line
 
+  // Reactive statements for validation
+  let emailValid = false;
+  let passwordValid = false;
+  let confirmPassValid = false;
+
+  $: emailValid = /^\S+@\S+\.\S+$/.test(email);
+  $: passwordValid = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(password);
+  $: confirmPassValid = password === confirmPass;
+
+  //
+
   //signup with google functionality
   async function handleGoogleSignIn() {
     await authHandlers.signInWithGoogle();
   }
 
-  async function handleAuthenticate() {
-    if (authenticating) {
-      return;
-    }
-    if (!email || !password || (register && !confirmPass)) {
+  async function handleLogin() {
+    if (authenticating || !email || !password) {
       error = true;
       return;
     }
+
     authenticating = true;
     try {
-      if (!register) {
-        await authHandlers.login(email, password);
-      } else {
-        await authHandlers.signup(email, password);
-      }
+      await authHandlers.login(email, password);
     } catch (err) {
-      console.log("There was an auth error", err);
       error = true;
       authenticating = false;
       message = `Authentication error: ${err.message}`;
     }
   }
+
+  async function handleSignup() {
+    if (authenticating || !email || !password || !confirmPass) {
+      error = true;
+      return;
+    }
+
+    if (password !== confirmPass) {
+      error = true;
+      message = "Passwords do not match.";
+      authenticating = false;
+      return;
+    }
+
+    authenticating = true;
+    try {
+      await authHandlers.signup(email, password);
+    } catch (err) {
+      error = true;
+      authenticating = false;
+      message = `Authentication error: ${err.message}`;
+    }
+  }
+
   function handleRegister() {
     register = !register;
   }
@@ -47,34 +75,32 @@
     showSpinner = true;
     await handleAuthenticate();
     showSpinner = false;
-    handleAuthenticate(); // Add this line
   }
 </script>
 
 <div class="container mx-auto">
   <!-- your markup here -->
-
+  {#if message}
+    <div class="mt-2 text-center">
+      <p class="text-sm text-gray-600 dark:text-gray-400">{message}</p>
+    </div>
+  {/if}
   <main class="w-full max-w-md mx-auto p-6">
-    {#if message}
-      <div class="mt-2 text-center">
-        <p class="text-sm text-gray-600 dark:text-gray-400">{message}</p>
-      </div>
-    {/if}
     <div
       class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700"
     >
       <div class="p-4 sm:p-7">
         <div class="text-center">
           <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">
-            Sign in
+            Sign up
           </h1>
           <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account yet?
+            Already have an account yet?
             <a
-              class="text-orange-650 decoration-2 hover:underline font-medium"
-              href="/signup"
+              class="text-blue-600 decoration-2 hover:underline font-medium"
+              href="/signin"
             >
-              Sign up here
+              Sign in here
             </a>
           </p>
         </div>
@@ -109,7 +135,7 @@
                 fill="#EB4335"
               />
             </svg>
-            Sign in with Google
+            Sign up with Google
           </button>
 
           <div
@@ -119,10 +145,7 @@
           </div>
 
           <!-- Form -->
-          <form
-            on:submit|preventDefault={handleSubmit}
-            class="space-y-5 {$$props.class}"
-          >
+          <form on:submit={handleSubmit}>
             <div class="grid gap-y-4">
               <!-- Form Group -->
               <div>
@@ -131,6 +154,7 @@
                 >
                 <div class="relative">
                   <input
+                    class:is-invalid={!emailValid && email.length > 0}
                     bind:value={email}
                     placeholder="Email"
                     type="email"
@@ -140,6 +164,7 @@
                     required
                     aria-describedby="email-error"
                   />
+
                   <div
                     class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3"
                   >
@@ -170,22 +195,17 @@
                     for="password"
                     class="block text-sm mb-2 dark:text-white">Password</label
                   >
-                  <a
-                    class="text-sm text-blue-600 decoration-2 hover:underline font-medium"
-                    href="../examples/html/recover-account.html"
-                    >Forgot password?</a
-                  >
                 </div>
                 <div class="relative">
                   <input
-                    placeholder="Password"
+                    class:is-invalid={!passwordValid && password.length > 0}
+                    bind:value={password}
                     type="password"
                     id="password"
                     name="password"
                     class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
                     required
                     aria-describedby="password-error"
-                    bind:value={password}
                   />
                   <div
                     class="absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3"
@@ -206,6 +226,35 @@
                 </div>
                 <p class="hidden text-xs text-red-600 mt-2" id="password-error">
                   8+ characters required
+                </p>
+              </div>
+
+              <div>
+                <label
+                  for="confirm-password"
+                  class="block text-sm mb-2 dark:text-white"
+                  >Confirm Password</label
+                >
+                <div class="relative">
+                  <input
+                    class:is-invalid={!confirmPassValid &&
+                      confirmPass.length > 0}
+                    bind:value={confirmPass}
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    class="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400"
+                    required
+                    aria-describedby="confirm-password-error"
+                  />
+                </div>
+                <p
+                  class={!confirmPassValid && confirmPass.length > 0
+                    ? "block"
+                    : "hidden"}
+                  id="confirm-password-error"
+                >
+                  Passwords do not match.
                 </p>
               </div>
               <!-- End Form Group -->
@@ -231,10 +280,10 @@
               <button
                 type="submit"
                 class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
-                on:click={handleSubmit}
+                on:click={handleSignup}
               >
-                {#if !showSpinner}
-                  Sign in
+                {#if !authenticating}
+                  Sign up
                 {:else}
                   <div class="spinner" />
                 {/if}
@@ -249,6 +298,10 @@
 </div>
 
 <style>
+  /* Invalid button */
+  .is-invalid {
+    border-color: #ef4444;
+  }
   .spinner {
     border: 2px solid rgba(255, 255, 255, 0.1);
     border-left-color: #fff;

@@ -24,6 +24,7 @@
 	"type": "module",
 	"dependencies": {
 		"@chec/commerce.js": "^2.8.0",
-		"daisyui": "^2.51.5"
+		"daisyui": "^2.51.5",
+		"firebase": "^9.19.1"
 	}
 }

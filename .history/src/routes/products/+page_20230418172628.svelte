@@ -1,8 +1,8 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import commerce from "$lib/commerce";
-  import addToCart from "src/components/CartItems.svelte";
-  // import addToCart from "$lib/cart.js";
+  import cart from "$lib/cart.js";
+  import addToCart from "$lib/cart.js";
   interface Product {
     id: string;
     name: string;
